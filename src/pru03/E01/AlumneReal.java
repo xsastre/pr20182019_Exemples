@@ -1,12 +1,12 @@
-package pru03;
+package pru03.E01;
 
 
 public class AlumneReal extends Alumne implements InteficiaAlumne {
 	
-	/* Aquí volem posar una matriu per controlar els moduls als quals
+	/* Aquï¿½ volem posar una matriu per controlar els moduls als quals
 	 * se pot matricular un alumne. Com que Java no permet crear arrays
 	 * multidimensionals haurem de crear una classe modul_matricula amb dos
-	 * atributs nom_modul i matriculat, i després fer un array d'objectes
+	 * atributs nom_modul i matriculat, i desprï¿½s fer un array d'objectes
 	 * modul_matricula
 	 * 
 	 */
@@ -29,64 +29,64 @@ public class AlumneReal extends Alumne implements InteficiaAlumne {
 	}
 
 	/*  
-	 * Implementació del constructor
+	 * Implementaciï¿½ del constructor
 	 */
 	
 	public AlumneReal(String nom) {
-		this.nom=nom; //this.nom és l'atribut nom heretat de la classe Alumne
+		this.nom=nom; //this.nom ï¿½s l'atribut nom heretat de la classe Alumne
 		
 		/* 
-		 * Aquí indicarem que no està matriculat encara de cap mòdul.
-		 * Només ho farem per dos mòduls. Feu-ho per la resta de mòduls de 
+		 * Aquï¿½ indicarem que no estï¿½ matriculat encara de cap mï¿½dul.
+		 * Nomï¿½s ho farem per dos mï¿½duls. Feu-ho per la resta de mï¿½duls de 
 		 * 1er DAM.
 		 */
 		
 		/*
-		 * Ho podriem fer així com segueix, però no vols sembla mes elegant
+		 * Ho podriem fer aixï¿½ com segueix, perï¿½ no vols sembla mes elegant
 		 * i optim fer-ho d'una altra manera?
 		 *
 		this.moduls=new Modul_Matricula[2];
-		this.moduls[0] = new Modul_Matricula("Programació",false);
+		this.moduls[0] = new Modul_Matricula("Programaciï¿½",false);
 		this.moduls[1] = new Modul_Matricula("Llenguatge de marques",false);
 		*/
 
 		
 		
-		String[] nom_moduls= {"Programació",
+		String[] nom_moduls= {"Programaciï¿½",
 				"Llenguatge de marques",
 				"FOL",
 				"Entorns de desenvolupament",
 				"Base de dades",
-				"Sistemes Informàtics"};
+				"Sistemes Informï¿½tics"};
 		
 		this.inicialitzar_Modul_Matricula(2, nom_moduls);
 		
 	}
 
 	/*  
-	 * Implementem el mètode de l'interface
+	 * Implementem el mï¿½tode de l'interface
 	 */
 
 	@Override
 	public void matricularModul(String nom_modul) throws Exception {
 		
 		/* 
-		 * Comprovarem que el nom del modul és "matriculable" si no ho
-		 * és llançarem una excepció
+		 * Comprovarem que el nom del modul ï¿½s "matriculable" si no ho
+		 * ï¿½s llanï¿½arem una excepciï¿½
 		 */
 
 		int nom_modul_trobat=trobarNomModul(nom_modul);
 		
 		if (nom_modul_trobat==-1) 
-			throw new Exception ("Missatge d'excepció control·lada ==> Nom de mòdul erroni");
+			throw new Exception ("Missatge d'excepciï¿½ controlï¿½lada ==> Nom de mï¿½dul erroni");
 		else if (moduls[nom_modul_trobat].matriculat==true)
-				throw new Exception ("Missatge d'excepció control·lada ==> Mòdul ja matriculat");
+				throw new Exception ("Missatge d'excepciï¿½ controlï¿½lada ==> Mï¿½dul ja matriculat");
 		else 
 			moduls[nom_modul_trobat].matriculat=true;
 	}
 
 	/*  
-	 * Implementem nous mètode propi de la subclasse
+	 * Implementem nous mï¿½tode propi de la subclasse
 	 */
 
 	public int trobarNomModul(String nom_modul) { // retorna -1 si el nom no existeix o la posicio si existeix
@@ -104,7 +104,7 @@ public class AlumneReal extends Alumne implements InteficiaAlumne {
 			return i;
 	}
 	
-	public boolean comprovarMatriculat(String nom_modul) { // implementació d'un get per matriculat_curs
+	public boolean comprovarMatriculat(String nom_modul) { // implementaciï¿½ d'un get per matriculat_curs
 		int nom_modul_trobat=trobarNomModul(nom_modul);
 		if (nom_modul_trobat==-1) 
 			return false;
@@ -113,17 +113,17 @@ public class AlumneReal extends Alumne implements InteficiaAlumne {
 	}
 	
 	/*  
-	 * Implementem el mètode de l'interface
+	 * Implementem el mï¿½tode de l'interface
 	 */
 	
 	
 	@Override
 	public int ferExamen(String nom_modul) throws Exception {
-		if (this.comprovarMatriculat(nom_modul)) { //comprova si està matriculat
+		if (this.comprovarMatriculat(nom_modul)) { //comprova si estï¿½ matriculat
 			return (int)(Math.random()*10);
 		}
 		else
-			throw new Exception ("Missatge d'excepció control·lada ==> L'alumne "+this.nom+
-					" no està matriculat i no pot fer l'examen");
+			throw new Exception ("Missatge d'excepciï¿½ controlï¿½lada ==> L'alumne "+this.nom+
+					" no estï¿½ matriculat i no pot fer l'examen");
 	}
 }

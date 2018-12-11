@@ -1,4 +1,4 @@
-package pru03;
+package pru03.E01;
 
 
 public interface InteficiaAlumne {
