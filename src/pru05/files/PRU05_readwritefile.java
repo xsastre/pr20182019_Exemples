@@ -29,17 +29,17 @@ public class PRU05_readwritefile {
 			BufferedReader br_senars = new BufferedReader(new FileReader(NOM_FITXER_LECTURA_SENARS));
 			BufferedWriter bw = new BufferedWriter(new FileWriter(NOM_FITXER_ESCRIPTURA));
 
-			String linea1 = "";
-			String linea2 = "";
+			String linia1 = "";
+			String linia2 = "";
 
-			while ( (linea1 != null) || (linea2 != null) ) {
-				linea1 = br_parells.readLine();
-				linea2 = br_senars.readLine();
-				if (linea1 != null) {
-					bw.write(linea1 + nl);
+			while ( (linia1 != null) || (linia2 != null) ) {
+				linia1 = br_parells.readLine();
+				linia2 = br_senars.readLine();
+				if (linia1 != null) {
+					bw.write(linia1 + nl);
 				}
-				if (linea2 != null) {
-					bw.write(linea2 + nl);
+				if (linia2 != null) {
+					bw.write(linia2 + nl);
 				}
 			} 
 
