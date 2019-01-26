@@ -5,6 +5,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 
+import proves.UtilsProgramacio;
+
 public class LlegirTXTBinari {
 	public static final String NOM_FITXER="c:\\tmp\\parells.dat";
 
