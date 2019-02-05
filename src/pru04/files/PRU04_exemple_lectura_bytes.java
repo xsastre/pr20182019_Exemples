@@ -1,4 +1,4 @@
-package pru05.files;
+package pru04.files;
 
 
 import java.io.BufferedReader;
@@ -13,7 +13,7 @@ import java.io.InputStream;
  * @author Xavier
  *
  */
-public class PRU05_exemple_lectura_bytes {
+public class PRU04_exemple_lectura_bytes {
 
 	/**
 	 * @param args

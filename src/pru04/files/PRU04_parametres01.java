@@ -1,6 +1,6 @@
-package pru05.files;
+package pru04.files;
 
-public class PRU05_parametres01 {
+public class PRU04_parametres01 {
 	public static void main(String[] arg) {
 		if (arg.length==0) {
 			System.out.println("Falten parametres");

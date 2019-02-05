@@ -1,4 +1,4 @@
-package prU06;
+package prU05;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Date;
-public class PRU06Exemple_connexio {
+public class PRU05Exemple_connexio {
 
     private Connection connect = null;
     private Statement statement = null;
