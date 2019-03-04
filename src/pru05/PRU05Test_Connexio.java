@@ -1,4 +1,4 @@
-package prU05;
+package pru05;
 
 
 public class PRU05Test_Connexio {
