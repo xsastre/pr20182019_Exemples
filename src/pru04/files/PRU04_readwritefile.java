@@ -1,7 +1,7 @@
 /**
  * 
  */
-package pru05.files;
+package pru04.files;
 
 
 import java.io.BufferedReader;
@@ -13,7 +13,7 @@ import java.io.IOException;
  * @author Xavier
  *
  */
-public class PRU05_readwritefile {
+public class PRU04_readwritefile {
 
 	/**
 	 * @param args
